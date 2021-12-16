@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  unity-websocket:
+    build: .
+    image: unity-websocket-local
+    container_name: unity-websocket-local
+    ports:
+      - 8000:8000
+      - 8360:8360
+    command: >
+      python -m http.server 8360
